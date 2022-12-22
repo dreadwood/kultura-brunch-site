@@ -1,18 +1,9 @@
+extends ./pug/components/layout.pug
 include ./pug/components/head
-include ./pug/components/image
-include ./pug/components/header
-include ./pug/components/footer
 
-doctype html
-html(lang="ru")
-  head
-    +head("Kultura brunch. О нас.")
+block head
+  - const title = "Kultura brunch. О нас."
+  +head(title)
 
-  body
-    +header()
-
-    main.page
-      h1.page__title О нас и о вас
-
-
-    +footer()
+block content
+  h1.page__title О нас и о вас

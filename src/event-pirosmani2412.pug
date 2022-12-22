@@ -1,26 +1,16 @@
+extends ./pug/components/layout.pug
 include ./pug/components/head
-include ./pug/components/image
-include ./pug/components/header
 include ./pug/components/card-buy
-include ./pug/components/footer
 
--
-  const event = events[0]
-  const title = `Kultura brunch. ${event.title}`
-  const buyButton = {
-    text: "Купить через бот",
-    link: "https://t.me/KulturaBrunchBot"
-  }
+block head
+  - const event = events[0]
+  - const title = `Kultura brunch. ${event.title}`
+  +head(title)
 
-doctype html
-html(lang="ru")
-  head
-    +head(title)
-
-  body
-    +header()
-
-    main.page
-      +card-buy(event)
-
-    +footer()
+block content
+  -
+    const buyButton = {
+      text: "Купить через бот",
+      link: "https://t.me/KulturaBrunchBot"
+    }
+  +card-buy(event)

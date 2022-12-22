@@ -1,35 +1,21 @@
+extends ./pug/components/layout.pug
 include ./pug/components/head
-include ./pug/components/header
-include ./pug/components/footer
 include ./pug/components/card
 
--
-  const title = `Kultura brunch`
+block head
+  -
+    const title = `Kultura brunch`
+  +head(title)
 
-doctype html
-html(lang="ru")
-  head
-    +head(title)
+block content
+  h1.visually-hidden Kultura brunch
 
-  body
-    +header()
+  h2.page__title Список мероприятий
+  .card-list.page__list
+    each event in events
+      +card(event)
 
-    main.page
-      h1.visually-hidden Kultura brunch
-
-      h2.page__title Список мероприятий
-      .card-list.page__list
-        each event in events
-          +card(event)
-
-      h2.page__title Прошедшие мероприятий
-      .card-list.page__list
-        each event in pastEvents
-          +card(event, { isGray: true, isLink: false })
-
-    +footer()
-
-    //- .overlay
-      .modal
-        button.modal__close
-          img(src="img/cross.svg")
+  h2.page__title Прошедшие мероприятий
+  .card-list.page__list
+    each event in pastEvents
+      +card(event, { isGray: true, isLink: false })
