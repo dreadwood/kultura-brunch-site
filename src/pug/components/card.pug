@@ -1,7 +1,7 @@
 mixin card(event, opt = { isLink: true })
   a.card(class=(opt.isGray ? "card--gray" : null) href=(opt.isLink ? `event-${event.id}.pug` : null))
-    .img-ratio
-      +image(event.img, 1000, null, `Афиша ${event.title}`)
+    .card__img.img-ratio
+      +image(event.img, 460, null, `Афиша ${event.title}`)
     .card__content
       h3.card__title=event.title
       .card__price=(typeof event.full_price === "number" ? `${event.full_price} GEL` : event.full_price )
