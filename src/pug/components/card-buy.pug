@@ -26,6 +26,6 @@ mixin card-buy(event)
           if event.start_time
             span=event.start_time
           if event.place
-            a(href=event.place.url)=event.place.text
+            a(href=event.place.url target="_blank")=event.place.text
           if event.duration
             span=event.duration
