@@ -1,3 +1,5 @@
+include ./image
+
 mixin card(event, opt = { isLink: true })
   a.card(class=(opt.isGray ? "card--gray" : null) href=(opt.isLink ? `event-${event.id}.pug` : null))
     .card__img.img-ratio
