@@ -1,0 +1,43 @@
+.page {
+  @include wrapper;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  @include mobile-small {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+}
+
+.page__title {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 400;
+  @include mobile {
+    margin-bottom: 30px;
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+
+.page__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
+  gap: 20px 40px;
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+  @include mobile {
+    gap: 6px 20px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @include mobile-small {
+    grid-template-columns: auto;
+    justify-items: center;
+    row-gap: 20px;
+  }
+}

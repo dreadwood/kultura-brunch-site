@@ -1,0 +1,29 @@
+mixin card-buy(event)
+  .card-buy
+    .card-buy__img
+      .img-ratio
+        +image(event.img, 1000, null, `Афиша ${event.title}`)
+
+    div
+      .card-buy__header
+        h3.card-buy__title=event.title
+        .card-buy__price #{event.full_price} GEL
+        if event.infopay
+          .card-buy__date=event.infopay
+      .card-buy__control
+        button.card-buy__btn(disabled) Купить на сайте (future)
+        if buyButton
+          a.card-buy__btn(href=buyButton.link target="_blank")=buyButton.text
+
+    .card-buy__content
+      .card-buy__description
+        each sentence in event.description
+          p=sentence
+      if event.start_time && event.place && event.duration
+        .card-buy__note
+          if event.start_time
+            span=event.start_time
+          if event.place
+            a(href=event.place.url)=event.place.text
+          if event.duration
+            span=event.duration

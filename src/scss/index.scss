@@ -1,0 +1,21 @@
+// vendor
+@import "vendor/visually-hidden.scss";
+
+// global
+@import "global/colors";
+@import "global/variables";
+@import "global/fonts";
+@import "global/mixins";
+@import "global/keyframes";
+@import "global/basic";
+
+// components
+@import "components/card-buy";
+@import "components/card";
+@import "components/footer";
+@import "components/header";
+@import "components/img-ratio";
+
+// @import "components/overlay";
+// @import "components/modal";
+@import "components/page";

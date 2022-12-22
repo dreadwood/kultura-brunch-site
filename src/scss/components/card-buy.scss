@@ -1,0 +1,140 @@
+.card-buy {
+  display: grid;
+  grid-template-columns: minmax(300px, 480px) minmax(250px, 346px);
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  @include mobile {
+    grid-template-columns: auto;
+    justify-items: center;
+    gap: 40px;
+  }
+}
+
+.card-buy__img {
+  @include mobile {
+    width: 100%;
+    max-width: 540px;
+  }
+}
+
+.card-buy__header {
+  margin-bottom: 30px;
+  text-align: center;
+  @include mobile {
+    margin-bottom: 36px;
+  }
+}
+
+.card-buy__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 34px;
+  line-height: 44px;
+  font-weight: 400;
+  text-align: center;
+  @include mobile {
+    font-size: 26px;
+    line-height: 34px;
+  }
+}
+
+.card-buy__price {
+  margin-top: 3px;
+  font-size: 22px;
+  line-height: 38px;
+  text-align: center;
+  @include mobile {
+    margin-bottom: 8px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.card-buy__date {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.card-buy__control {
+  & > *:not(:last-child) {
+    margin-bottom: 24px;
+  }
+  @include mobile {
+    max-width: 440px;
+    margin: 0 auto;
+    & > *:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.card-buy__btn {
+  @include transition(all);
+  display: block;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 55px;
+  padding: 0 30px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: $color-white;
+  background-color: $color-black;
+  border: 1px solid $color-black;
+  border-radius: 16px;
+  &:not([disabled]):hover,
+  &:not([disabled]):focus {
+    box-shadow: 0 0 0 2px $color-black;
+  }
+  &[disabled] {
+    color: $color-gray-150;
+    background-color: $color-gray-980;
+    border-color: $color-gray-490;
+    cursor: default;
+  }
+}
+
+.card-buy__content {
+  grid-column: 1 / -1;
+  max-width: 80ch;
+}
+
+.card-buy__description {
+  margin-bottom: 20px;
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.card-buy__note {
+  position: relative;
+  display: grid;
+  align-content: start;
+  margin-top: 20px;
+  padding-left: 26px;
+  a[href] {
+    @include transition(all);
+    width: max-content;
+    text-decoration: underline;
+    &:hover,
+    &:focus {
+      color: $color-additional;
+      text-decoration: none;
+      text-shadow: 0 0 16px transparentize($color-black, 0.9);
+    }
+  }
+  &::before {
+    content: "📍";
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+

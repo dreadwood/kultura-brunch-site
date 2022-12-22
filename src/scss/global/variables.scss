@@ -1,0 +1,40 @@
+// fonts
+$font-default: "Roboto", arial, sans-serif;
+
+// retina
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+// container
+$container-width: 980px;
+
+// viewport
+$desktop-width: 1024px;
+$tablet-width: 768px;
+$mobile-big-width: 500px;
+$mobile-small-width: 320px;
+
+// padding
+$desktop-padding: 50px;
+$tablet-padding: 50px;
+$mobile-padding: 50px;
+$mobile-small-padding: 20px;
+
+$block-padding: 24px;
+$block-padding-mobile: 20px;
+$block-color-indent: 36px;
+$block-color-indent-mobile: 20px;
+$page-top-padding: 46px;
+$page-top-padding-mobile: 15px;
+$page-bottom-padding: 80px;
+$page-bottom-padding-mobile: 50px;
+
+
+// other
+$box-shadow-card: 0 4px 15px 4px transparentize($color-gray-830, 0.5);
+$box-shadow-modal: 0 7px 20px 4px transparentize($color-black, 0.85);
+
+
+// components
+$members-item-padding: 20px;
+$members-item-padding-mobile: 12px;

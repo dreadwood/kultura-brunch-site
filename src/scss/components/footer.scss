@@ -1,0 +1,36 @@
+.footer {
+  line-height: 20px;
+  text-align: center;
+  background-color: $color-gray-980;
+}
+
+.footer__wrp {
+  @include wrapper;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.footer__copyright {
+  margin-top: 14px;
+  margin-bottom: 0;
+  line-height: 28px;
+}
+
+.footer__link {
+  @include transition(all);
+  padding: 4px 10px;
+  &:hover,
+  &:focus {
+    color: $color-main;
+    text-shadow: 0 0 16px transparentize($color-black, 0.9);
+  }
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  & > *:not(:last-child) {
+    // margin-right: 20px;
+  }
+}

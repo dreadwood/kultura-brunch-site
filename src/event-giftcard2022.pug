@@ -1,0 +1,26 @@
+include ./pug/components/head
+include ./pug/components/image
+include ./pug/components/header
+include ./pug/components/card-buy
+include ./pug/components/footer
+
+-
+  const event = events[2]
+  const title = `Kultura brunch. ${event.title}`
+  const buyButton = {
+    text: "Заказать",
+    link: "https://t.me/ellyprohorova"
+  }
+
+doctype html
+html(lang="ru")
+  head
+    +head(title)
+
+  body
+    +header()
+
+    main.page
+      +card-buy(event)
+
+    +footer()

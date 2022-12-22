@@ -1,0 +1,42 @@
+.card {
+  display: block;
+  width: 100%;
+  max-width: 460px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  &:not(.card--gray):hover,
+  &:not(.card--gray):focus {
+    .card__title {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .card__img img {
+      transform: scale(1.05);
+    }
+  }
+  &--gray {
+    cursor: default;
+    .card__img img {
+      filter: grayscale(1) brightness(1.4);
+    }
+  }
+}
+
+.card__content {
+  display: grid;
+  justify-content: center;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  text-align: center;
+}
+
+.card__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-size: inherit;
+  line-height: inherit;
+}

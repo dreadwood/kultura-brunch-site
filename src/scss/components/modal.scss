@@ -1,0 +1,28 @@
+.modal {
+  position: relative;
+  width: 1000px;
+  height: 600px;
+  padding: 40px;
+  overflow: hidden;
+  background-color: $color-white;
+  border-radius: 20px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  &:hover,
+  &:focus {
+    background-color: transparentize($color-black, 0.95);
+  }
+}
