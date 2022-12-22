@@ -30,7 +30,4 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  & > *:not(:last-child) {
-    // margin-right: 20px;
-  }
 }
