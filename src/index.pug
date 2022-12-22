@@ -26,7 +26,7 @@ html(lang="ru")
         each event in events
           +card(event)
 
-      h1.page__title Прошедшие мероприятий
+      h2.page__title Прошедшие мероприятий
       .card-list.page__list
         each event in pastEvents
           +card(event, { isGray: true, isLink: false })

@@ -2,11 +2,11 @@ mixin card-buy(event)
   .card-buy
     .card-buy__img
       .img-ratio
-        +image(event.img, 1000, null, `Афиша ${event.title}`)
+        +image(event.img, 540, null, `Афиша ${event.title}`)
 
     div
       .card-buy__header
-        h3.card-buy__title=event.title
+        h1.card-buy__title=event.title
         .card-buy__price #{event.full_price} GEL
         if event.infopay
           .card-buy__date=event.infopay

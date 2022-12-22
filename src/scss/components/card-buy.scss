@@ -122,6 +122,9 @@
   a[href] {
     @include transition(all);
     width: max-content;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
     text-decoration: underline;
     &:hover,
     &:focus {
