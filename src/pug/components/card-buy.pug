@@ -1,6 +1,6 @@
 include ./image
 
-mixin card-buy(event)
+mixin card-buy(event, opt = {})
   .card-buy
     .card-buy__img
       .img-ratio
@@ -13,10 +13,13 @@ mixin card-buy(event)
         if event.infopay
           .card-buy__date=event.infopay
       .card-buy__control
-        button.card-buy__btn(disabled) Купить на сайте (in coming)
+        if !opt.paypal
+          button.card-buy__btn(disabled) Купить на сайте (in coming)
         if buyButton
           a.card-buy__btn(href=buyButton.link target="_blank")=buyButton.text
-
+        if opt.paypal
+          .card-buy__paypal
+            include ../../vendor/paypal/button.html
     .card-buy__content
       .card-buy__description
         each sentence in event.description
@@ -29,3 +32,5 @@ mixin card-buy(event)
             a(href=event.place.url target="_blank")=event.place.text
           if event.duration
             span=event.duration
+
+

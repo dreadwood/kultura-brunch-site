@@ -1,9 +1,8 @@
 {
   "name": "kultura-brunch-site",
   "description": "kultura-brunch site",
-  "source": "src/index.pug",
   "scripts": {
-    "start": "parcel",
+    "start": "parcel src/index.pug src/event-serov1812.pug",
     "build": "parcel build",
     "editorconfig": "editorconfig-checker",
     "eslint": "eslint src/js/*/*.js",

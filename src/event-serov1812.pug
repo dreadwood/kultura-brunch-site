@@ -1,0 +1,16 @@
+extends ./pug/components/layout.pug
+include ./pug/components/head
+include ./pug/components/card-buy
+
+block head
+  - const event = pastEvents[0]
+  - const title = `Kultura brunch. ${event.title}`
+  +head(title)
+
+block content
+  -
+    const buyButton = {
+      text: "Купить через бот",
+      link: "https://t.me/KulturaBrunchBot"
+    }
+  +card-buy(event, {paypal: true})
