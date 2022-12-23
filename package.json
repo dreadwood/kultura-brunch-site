@@ -3,7 +3,7 @@
   "description": "kultura-brunch site",
   "scripts": {
     "start": "parcel src/index.pug src/event-serov1812.pug",
-    "build": "parcel build",
+    "build": "parcel build src/index.pug src/event-serov1812.pug",
     "editorconfig": "editorconfig-checker",
     "eslint": "eslint src/js/*/*.js",
     "gh-pages": "push-dir --dir=dist --branch=gh-pages",
