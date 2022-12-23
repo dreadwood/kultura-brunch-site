@@ -1,0 +1,31 @@
+extends ./pug/components/layout.pug
+include ./pug/components/head
+
+block head
+  -
+    const title = "Kultura brunch. Пользовательское соглашение."
+  +head(title)
+
+block content
+  .doc
+    h1 TERMS AND CONDITIONS
+    p Last updated: 23.12.2022
+    p Welcome to the website of "Kultura Brunch". Please read the terms of this Agreement carefully. While using any of the services of the website #[a(href="https://kulturabrunch.com") www.kulturabrunch.com], you agree to our Terms of Service.
+    p Our business and legislation in Georgia are constantly changing, so we can make changes to this user agreement, about which we will try to provide information to our customers, but this is not our obligation, so please check terms of use of our Internet Store periodically. It is your responsibility to get acquainted with the latest version when making an online purchase. The agreement will include the date of the last update.
+    p All the underlying terms regulate your use of our website and services.
+
+    h2 1. OUR SERVICE
+    p Kultura Brunch is an online shop that allows customers to purchase products and receive services through #[a(href="https://kulturabrunch.com") www.kulturabrunch.com].
+    p Kulturabrunch.com does not take responsibility if you as a website customer fail to buy the desired product.
+    p If the system denies performing the transaction, it will provide you with information about the unavailability of the product you have chosen; you agree to receive this information in accordance with the existing agreement.
+    p If there is a mistake in the price/information of the given service or product due to a mistake in the system, the company has the right to cancel/reject the order confirmation. The company can withdraw the order, even if the payment has been already made.
+    p #[b When can you buy products at the online store?]
+    p The product can be purchased from the site on any day of the week, including holidays, within 24 hours.
+    p #[b How to buy products at our online store]
+    p To buy a product from the site you need to specify your personal data and address on our site. During the buying process, it is required to fill in your name and surname, number and e-mail.
+
+    h2 2. RETURN FUND
+    p If your plans have changed more than 2 days (48 hours) before the event, we will refund the full amount previously paid.
+    p If your plans have changed less than 2 days (48 hours) before the event, then we will refund 50% of the ticket price.
+    p If canceled on the day of the event, no refund will be given.
+    p Contact us for a refund by e-mail #[a(href="mailto:kulturabrunch@gmail.com" target="_blank") kulturabrunch@gmail.com] or by telegram #[a(href="https://t.me/ellyprohorova" target="_blank") @ellyprohorova].
