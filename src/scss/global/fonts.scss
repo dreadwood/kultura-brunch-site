@@ -21,3 +21,15 @@
     url("../fonts/roboto-v30-latin_cyrillic-700.woff2") format("woff2"),
     url("../fonts/roboto-v30-latin_cyrillic-700.woff") format("woff");
 }
+
+@font-face {
+  font-family: "Noto Sans Georgian";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Noto Sans Georgian"),
+    local("Noto-Sans-Georgian-Regular"),
+    url("../fonts/noto-sans-georgian-v36-georgian-regular.woff2") format("woff2"),
+    url("../fonts/noto-sans-georgian-v36-georgian-regular.woff") format("woff");
+}
