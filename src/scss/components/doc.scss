@@ -1,0 +1,28 @@
+.doc {
+  max-width: 80ch;
+  ol li {
+    counter-increment: item;
+    &::marker {
+      content: attr(data-num) "." counter(item) ". ";
+    }
+  }
+  p {
+    margin-block-start: 0;
+    margin-block-end: 0.5em;
+  }
+  a[href] {
+    @include transition(all);
+    width: max-content;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: $color-additional;
+    text-decoration: underline;
+    &:hover,
+    &:focus {
+      color: inherit;
+      text-decoration: none;
+      text-shadow: 0 0 16px transparentize($color-black, 0.9);
+    }
+  }
+}

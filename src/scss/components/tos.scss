@@ -1,8 +1,0 @@
-.tos {
-  li {
-    counter-increment: item;
-    &::marker {
-      content: attr(data-num) "." counter(item) ". ";
-    }
-  }
-}
