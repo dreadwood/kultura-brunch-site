@@ -10,7 +10,7 @@
     margin-block-start: 0;
     margin-block-end: 0.5em;
   }
-  a[href] {
+  a[href]:not([href^="#"]) {
     @include transition(all);
     width: max-content;
     font-family: inherit;
