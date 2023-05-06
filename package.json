@@ -2,11 +2,10 @@
   "name": "kultura-brunch-site",
   "description": "kultura-brunch site",
   "scripts": {
-    "start": "parcel src/index.pug",
+    "start": "parcel src/index.pug --port 1234",
     "build": "parcel build src/index.pug",
     "editorconfig": "editorconfig-checker",
     "eslint": "eslint src/js/*/*.js",
-    "gh-pages": "push-dir --dir=dist --branch=gh-pages",
     "sprite": "gulp sprite",
     "stylelint": "stylelint \"src/scss/**/*.scss\"",
     "test": "npm run editorconfig && npm run stylelint && npm run eslint"
