@@ -1,0 +1,23 @@
+extends ./pug/components/layout.pug
+include ./pug/components/head
+
+block head
+  -
+    const title = "Kultura brunch. Политика возврата."
+  +head(title)
+
+block content
+  .doc
+    h1 Политика возврата
+    p Последнее обновление: 4 мая 2023
+
+    p Приобретая услуги на веб-сайте #[a(href="https://kulturabrunch.com") www.kulturabrunch.com], вы соглашаетесь с нашей Политикой возврата.
+
+    h2 Политика возврата:
+
+    ul
+      li Если ваши планы поменялись, более, чем за 2 дня (48 ч) до мероприятия, то мы вернем полностью всю ранее внесенную сумму.
+      li Если ваши планы изменились менее, чем за 2 дня (48 ч) до встречи, то мы вернем 50% от стоимости билета.
+      li При отмене в день мероприятия, оплата не возвращается.
+
+    p Свяжитесь с нами для возврата средств по электронной почте #[a(href="mailto:kulturabrunch@gmail.com" target="blank") kulturabrunch@gmail.com] или в телеграмме с #[a(href="https://t.me/ellyprohorova" target="blank") @ellyprohorova].

@@ -9,7 +9,7 @@ mixin card-buy(event, opt = {})
     div
       .card-buy__header
         h1.card-buy__title=event.title
-        .card-buy__price #{event.full_price} GEL
+        .card-buy__price=(typeof event.full_price === "number" ? `${event.full_price.toLocaleString('ru')} AMD` : event.full_price )
         if event.infopay
           .card-buy__date=event.infopay
       .card-buy__control

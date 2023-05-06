@@ -1,6 +1,7 @@
 extends ./pug/components/layout.pug
 include ./pug/components/head
 include ./pug/components/card
+include ./pug/components/console
 
 block head
   -
@@ -17,5 +18,6 @@ block content
 
   h2.page__title Прошедшие мероприятий
   .card-list.page__list
+    +console(pastEvents)
     each event in pastEvents
       +card(event, { isGray: true, isLink: false })

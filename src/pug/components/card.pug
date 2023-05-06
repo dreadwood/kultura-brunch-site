@@ -6,4 +6,4 @@ mixin card(event, opt = { isLink: true })
       +image(event.img, 460, null, `Афиша ${event.title}`)
     .card__content
       h3.card__title=event.title
-      .card__price=(typeof event.full_price === "number" ? `${event.full_price} GEL` : event.full_price )
+      .card__price=(typeof event.full_price === "number" ? `${event.full_price.toLocaleString('ru')} AMD` : event.full_price )

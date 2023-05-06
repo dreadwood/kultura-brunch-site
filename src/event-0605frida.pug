@@ -3,14 +3,15 @@ include ./pug/components/head
 include ./pug/components/card-buy
 
 block head
-  - const event = events[0]
-  - const title = `Kultura brunch. ${event.title}`
+  -
+    const event = events[0]
+    const title = `Kultura brunch. ${event.title}`
   +head(title)
 
 block content
   -
     const buyButton = {
       text: "Купить через бот",
-      link: "https://t.me/KulturaBrunchBot"
+      link: "https://t.me/KulturaBrunchArmBot"
     }
   +card-buy(event)

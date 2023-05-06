@@ -3,8 +3,9 @@ include ./pug/components/head
 include ./pug/components/card-buy
 
 block head
-  - const event = events[2]
-  - const title = `Kultura brunch. ${event.title}`
+  -
+    const event = events[2]
+    const title = `Kultura brunch. ${event.title}`
   +head(title)
 
 block content
